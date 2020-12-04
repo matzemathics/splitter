@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Splitter</string>
+    <string name="contents_text">Plain text</string>
+    <string name="btn_play">Play</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_recv">Receive</string>
+    <string name="tab_send">Share</string>
+    <string name="tab_recv">Receive</string>
+    <string name="settings">settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="use_wifi">use current wifi</string>
+    <string name="general_notification">general notifications</string>
+</resources>

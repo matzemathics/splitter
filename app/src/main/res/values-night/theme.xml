@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Splitter.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#7C9533</item>
+        <item name="colorPrimaryDark">#4B601F</item>
+        <item name="colorAccent">#F48551</item>
+    </style>
+
+    <style name="Theme.Splitter" parent="Theme.Splitter.Dark" />
+</resources>

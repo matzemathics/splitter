@@ -1,0 +1,957 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fa4b7683626, pid=4975, tid=0x00007fa4b6d24700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_242) (build 1.8.0_242-release-1644-b3-6222593)
+# Java VM: OpenJDK 64-Bit Server VM (25.242-b3-6222593 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x80f626]  Method::build_interpreter_method_data(methodHandle, Thread*)+0x86
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fa4b000b000):  JavaThread "main" [_thread_in_vm, id=4977, stack(0x00007fa4b6c25000,0x00007fa4b6d25000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000090
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007fa4b000b000, RCX=0x0000000000000001, RDX=0x0000000000000000
+RSP=0x00007fa4b6d22620, RBP=0x00007fa4b6d22660, RSI=0x00007fa4b6d226a0, RDI=0x00007fa4b6d22620
+R8 =0x00007fa4a1000000, R9 =0x0000000003b8ecbb, R10=0x00007fa4b7b9a000, R11=0x00007fa4a12bbcc0
+R12=0x00007fa4b6d226a0, R13=0x00007fa4b0008fd0, R14=0x00007fa4b6d22620, R15=0x0000000000000001
+RIP=0x00007fa4b7683626, EFLAGS=0x0000000000010246, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fa4b6d22620)
+0x00007fa4b6d22620:   0000000000000000 0000000000000000
+0x00007fa4b6d22630:   0000000000000000 00007fa4b6d22690
+0x00007fa4b6d22640:   00007fa4b6d226a0 00007fa4b6d22680
+0x00007fa4b6d22650:   0000000000000001 0000000000000001
+0x00007fa4b6d22660:   00007fa4b6d22700 00007fa4b74b528a
+0x00007fa4b6d22670:   0000000000000000 00007fa4b000b000
+0x00007fa4b6d22680:   00007fa498209358 00007fa4b000b000
+0x00007fa4b6d22690:   00007fa498209358 00007fa4b000b000
+0x00007fa4b6d226a0:   00007fa498209358 00007fa4b000b000
+0x00007fa4b6d226b0:   00007fa4a1005310 00007fa400000000
+0x00007fa4b6d226c0:   00007fa4b6d22798 00007fa4b6d22758
+0x00007fa4b6d226d0:   0000000000000000 00007fa4b000b000
+0x00007fa4b6d226e0:   00007fa4b4027220 0000000000000000
+0x00007fa4b6d226f0:   00007fa4b6d227a8 00007fa4b000b000
+0x00007fa4b6d22700:   00007fa4b6d22740 00007fa4b74b5405
+0x00007fa4b6d22710:   00007fa4b000b000 00007fa49859f1e8
+0x00007fa4b6d22720:   0000000000000000 00000000000000b7
+0x00007fa4b6d22730:   0000000000000000 00007fa498209341
+0x00007fa4b6d22740:   00007fa4b6d22798 00007fa4a10131f6
+0x00007fa4b6d22750:   00007fa4a10131b4 00007fa4b6d22758
+0x00007fa4b6d22760:   00007fa498209341 00007fa4b6d227a8
+0x00007fa4b6d22770:   0000000000000000 0000000000000000
+0x00007fa4b6d22780:   00007fa498209358 0000000000000000
+0x00007fa4b6d22790:   00007fa4b6d227a8 00007fa4b6d22800
+0x00007fa4b6d227a0:   00007fa4a1007ffd 0000000771d97790
+0x00007fa4b6d227b0:   0000000771d97790 0000000771d95198
+0x00007fa4b6d227c0:   00007fa4b6d227c0 00007fa49898d632
+0x00007fa4b6d227d0:   00007fa4b6d22828 00007fa49898d810
+0x00007fa4b6d227e0:   0000000000000000 00007fa49898d680
+0x00007fa4b6d227f0:   00007fa4b6d227a8 00007fa4b6d22810
+0x00007fa4b6d22800:   00007fa4b6d22870 00007fa4a1008042
+0x00007fa4b6d22810:   000000076e6cecf8 000000076e57d218 
+
+Instructions: (pc=0x00007fa4b7683626)
+0x00007fa4b7683606:   5c 41 5d 41 5e 41 5f 5d c3 90 48 8b 40 08 4c 8d
+0x00007fa4b7683616:   75 c0 4c 89 e6 4c 89 f7 48 8b 40 08 48 8b 40 18
+0x00007fa4b7683626:   4c 8b b8 90 00 00 00 e8 4e 2e bc ff 48 89 da 4c
+0x00007fa4b7683636:   89 f6 4c 89 ff e8 70 11 01 00 4c 89 f7 49 89 c7 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00007fa4b000b000 is a thread
+RCX=0x0000000000000001 is an unknown value
+RDX=0x0000000000000000 is an unknown value
+RSP=0x00007fa4b6d22620 is pointing into the stack for thread: 0x00007fa4b000b000
+RBP=0x00007fa4b6d22660 is pointing into the stack for thread: 0x00007fa4b000b000
+RSI=0x00007fa4b6d226a0 is pointing into the stack for thread: 0x00007fa4b000b000
+RDI=0x00007fa4b6d22620 is pointing into the stack for thread: 0x00007fa4b000b000
+R8 =0x00007fa4a1000000 is an unknown value
+R9 =0x0000000003b8ecbb is an unknown value
+R10=0x00007fa4b7b9a000: <offset 0xd26000> in /home/matze/android-studio/jre/jre/lib/amd64/server/libjvm.so at 0x00007fa4b6e74000
+R11=0x00007fa4a12bbcc0 is at entry_point+32 in (nmethod*)0x00007fa4a12bbb50
+R12=0x00007fa4b6d226a0 is pointing into the stack for thread: 0x00007fa4b000b000
+R13=0x00007fa4b0008fd0 is an unknown value
+R14=0x00007fa4b6d22620 is pointing into the stack for thread: 0x00007fa4b000b000
+R15=0x0000000000000001 is an unknown value
+
+
+Stack: [0x00007fa4b6c25000,0x00007fa4b6d25000],  sp=0x00007fa4b6d22620,  free space=1013k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x80f626]  Method::build_interpreter_method_data(methodHandle, Thread*)+0x86
+V  [libjvm.so+0x64128a]  InterpreterRuntime::note_trap(JavaThread*, int, Thread*)+0x18a
+V  [libjvm.so+0x641405]  InterpreterRuntime::create_exception(JavaThread*, char*, char*)+0x145
+
+[error occurred during error reporting (printing native stack), id 0xb]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+
+[error occurred during error reporting (printing Java stack), id 0xb]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fa4b00d8000 JavaThread "Service Thread" daemon [_thread_blocked, id=4996, stack(0x00007fa499c17000,0x00007fa499d18000)]
+  0x00007fa4b00cd000 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=4995, stack(0x00007fa499d19000,0x00007fa499e19000)]
+  0x00007fa4b00cb000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=4994, stack(0x00007fa499e1a000,0x00007fa499f1a000)]
+  0x00007fa4b00c9000 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=4993, stack(0x00007fa499f1b000,0x00007fa49a01b000)]
+  0x00007fa4b00c6000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=4992, stack(0x00007fa49a01c000,0x00007fa49a11c000)]
+  0x00007fa4b00c4000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4991, stack(0x00007fa49a11c000,0x00007fa49a21d000)]
+  0x00007fa4b0092800 JavaThread "Finalizer" daemon [_thread_blocked, id=4990, stack(0x00007fa49a7e1000,0x00007fa49a8e2000)]
+  0x00007fa4b008e000 JavaThread "Reference Handler" daemon [_thread_blocked, id=4989, stack(0x00007fa49a8e2000,0x00007fa49a9e3000)]
+=>0x00007fa4b000b000 JavaThread "main" [_thread_in_vm, id=4977, stack(0x00007fa4b6c25000,0x00007fa4b6d25000)]
+
+Other Threads:
+  0x00007fa4b0084800 VMThread [stack: 0x00007fa49a9e4000,0x00007fa49aae4000] [id=4988]
+  0x00007fa4b00da800 WatcherThread [stack: 0x00007fa499b17000,0x00007fa499c17000] [id=4997]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007fa4b0008fd0] MethodData_lock - owner thread: 0x00007fa4b000b000
+
+heap address: 0x00000006c5a00000, size: 4006 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 139776K, used 88906K [0x000000076c900000, 0x0000000775c00000, 0x00000007c0000000)
+  eden space 129024K, 68% used [0x000000076c900000,0x0000000771fd2818,0x0000000774700000)
+  from space 10752K, 0% used [0x0000000775180000,0x0000000775180000,0x0000000775c00000)
+  to   space 10752K, 0% used [0x0000000774700000,0x0000000774700000,0x0000000775180000)
+ ParOldGen       total 116736K, used 9181K [0x00000006c5a00000, 0x00000006ccc00000, 0x000000076c900000)
+  object space 116736K, 7% used [0x00000006c5a00000,0x00000006c62f7578,0x00000006ccc00000)
+ Metaspace       used 32685K, capacity 33197K, committed 33536K, reserved 1079296K
+  class space    used 4115K, capacity 4280K, committed 4352K, reserved 1048576K
+
+Card table byte_map: [0x00007fa4b600d000,0x00007fa4b67e1000] byte_map_base: 0x00007fa4b29e0000
+
+Marking Bits: (ParMarkBitMap*) 0x00007fa4b7b897e0
+ Begin Bits: [0x00007fa4542d0000, 0x00007fa458168000)
+ End Bits:   [0x00007fa458168000, 0x00007fa45c000000)
+
+Polling page: 0x00007fa4b7e37000
+
+CodeCache: size=245760Kb used=7013Kb max_used=7025Kb free=238746Kb
+ bounds [0x00007fa4a1000000, 0x00007fa4a16f0000, 0x00007fa4b0000000]
+ total_blobs=2696 nmethods=2262 adapters=349
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1,194 Thread 0x00007fa4b00cd000 nmethod 2257 0x00007fa4a16da310 code [0x00007fa4a16da460, 0x00007fa4a16da5d0]
+Event: 1,194 Thread 0x00007fa4b00cd000 2258       1       org.jetbrains.kotlin.container.ConstructorInfo::getConstructor (5 bytes)
+Event: 1,194 Thread 0x00007fa4b00cd000 nmethod 2258 0x00007fa4a16da650 code [0x00007fa4a16da7a0, 0x00007fa4a16da8b0]
+Event: 1,194 Thread 0x00007fa4b00cd000 2259       1       org.jetbrains.kotlin.container.ConstructorBinding::getConstructor (5 bytes)
+Event: 1,194 Thread 0x00007fa4b00cd000 nmethod 2259 0x00007fa4a16da910 code [0x00007fa4a16daa60, 0x00007fa4a16dab70]
+Event: 1,194 Thread 0x00007fa4b00cb000 nmethod 2256 0x00007fa4a16dd950 code [0x00007fa4a16ddaa0, 0x00007fa4a16ddc18]
+Event: 1,196 Thread 0x00007fa4b00cd000 2260       3       kotlin.collections.ArraysKt___ArraysKt::toList (52 bytes)
+Event: 1,197 Thread 0x00007fa4b00cd000 nmethod 2260 0x00007fa4a16ddcd0 code [0x00007fa4a16de080, 0x00007fa4a16dfa58]
+Event: 1,197 Thread 0x00007fa4b00cd000 2265       3       org.jetbrains.kotlin.com.intellij.psi.search.GlobalSearchScope$UnionScope$$Lambda$104/2034291323::value (12 bytes)
+Event: 1,197 Thread 0x00007fa4b00c6000 2266       4       java.util.HashMap$HashIterator::hasNext (13 bytes)
+
+GC Heap History (6 events):
+Event: 0,547 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 75264K, used 64512K [0x000000076c900000, 0x0000000771d00000, 0x00000007c0000000)
+  eden space 64512K, 100% used [0x000000076c900000,0x0000000770800000,0x0000000770800000)
+  from space 10752K, 0% used [0x0000000771280000,0x0000000771280000,0x0000000771d00000)
+  to   space 10752K, 0% used [0x0000000770800000,0x0000000770800000,0x0000000771280000)
+ ParOldGen       total 172032K, used 0K [0x00000006c5a00000, 0x00000006d0200000, 0x000000076c900000)
+  object space 172032K, 0% used [0x00000006c5a00000,0x00000006c5a00000,0x00000006d0200000)
+ Metaspace       used 15954K, capacity 16290K, committed 16640K, reserved 1064960K
+  class space    used 1835K, capacity 1945K, committed 2048K, reserved 1048576K
+Event: 0,554 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 75264K, used 10736K [0x000000076c900000, 0x0000000775c00000, 0x00000007c0000000)
+  eden space 64512K, 0% used [0x000000076c900000,0x000000076c900000,0x0000000770800000)
+  from space 10752K, 99% used [0x0000000770800000,0x000000077127c098,0x0000000771280000)
+  to   space 10752K, 0% used [0x0000000775180000,0x0000000775180000,0x0000000775c00000)
+ ParOldGen       total 172032K, used 4517K [0x00000006c5a00000, 0x00000006d0200000, 0x000000076c900000)
+  object space 172032K, 2% used [0x00000006c5a00000,0x00000006c5e697f0,0x00000006d0200000)
+ Metaspace       used 15954K, capacity 16290K, committed 16640K, reserved 1064960K
+  class space    used 1835K, capacity 1945K, committed 2048K, reserved 1048576K
+}
+Event: 0,691 GC heap before
+{Heap before GC invocations=2 (full 0):
+ PSYoungGen      total 75264K, used 30696K [0x000000076c900000, 0x0000000775c00000, 0x00000007c0000000)
+  eden space 64512K, 30% used [0x000000076c900000,0x000000076dc7e1a8,0x0000000770800000)
+  from space 10752K, 99% used [0x0000000770800000,0x000000077127c098,0x0000000771280000)
+  to   space 10752K, 0% used [0x0000000775180000,0x0000000775180000,0x0000000775c00000)
+ ParOldGen       total 172032K, used 4517K [0x00000006c5a00000, 0x00000006d0200000, 0x000000076c900000)
+  object space 172032K, 2% used [0x00000006c5a00000,0x00000006c5e697f0,0x00000006d0200000)
+ Metaspace       used 20730K, capacity 21104K, committed 21248K, reserved 1069056K
+  class space    used 2412K, capacity 2522K, committed 2560K, reserved 1048576K
+Event: 0,696 GC heap after
+Heap after GC invocations=2 (full 0):
+ PSYoungGen      total 139776K, used 9528K [0x000000076c900000, 0x0000000775c00000, 0x00000007c0000000)
+  eden space 129024K, 0% used [0x000000076c900000,0x000000076c900000,0x0000000774700000)
+  from space 10752K, 88% used [0x0000000775180000,0x0000000775ace188,0x0000000775c00000)
+  to   space 10752K, 0% used [0x0000000774700000,0x0000000774700000,0x0000000775180000)
+ ParOldGen       total 172032K, used 4590K [0x00000006c5a00000, 0x00000006d0200000, 0x000000076c900000)
+  object space 172032K, 2% used [0x00000006c5a00000,0x00000006c5e7b800,0x00000006d0200000)
+ Metaspace       used 20730K, capacity 21104K, committed 21248K, reserved 1069056K
+  class space    used 2412K, capacity 2522K, committed 2560K, reserved 1048576K
+}
+Event: 0,696 GC heap before
+{Heap before GC invocations=3 (full 1):
+ PSYoungGen      total 139776K, used 9528K [0x000000076c900000, 0x0000000775c00000, 0x00000007c0000000)
+  eden space 129024K, 0% used [0x000000076c900000,0x000000076c900000,0x0000000774700000)
+  from space 10752K, 88% used [0x0000000775180000,0x0000000775ace188,0x0000000775c00000)
+  to   space 10752K, 0% used [0x0000000774700000,0x0000000774700000,0x0000000775180000)
+ ParOldGen       total 172032K, used 4590K [0x00000006c5a00000, 0x00000006d0200000, 0x000000076c900000)
+  object space 172032K, 2% used [0x00000006c5a00000,0x00000006c5e7b800,0x00000006d0200000)
+ Metaspace       used 20730K, capacity 21104K, committed 21248K, reserved 1069056K
+  class space    used 2412K, capacity 2522K, committed 2560K, reserved 1048576K
+Event: 0,717 GC heap after
+Heap after GC invocations=3 (full 1):
+ PSYoungGen      total 139776K, used 0K [0x000000076c900000, 0x0000000775c00000, 0x00000007c0000000)
+  eden space 129024K, 0% used [0x000000076c900000,0x000000076c900000,0x0000000774700000)
+  from space 10752K, 0% used [0x0000000775180000,0x0000000775180000,0x0000000775c00000)
+  to   space 10752K, 0% used [0x0000000774700000,0x0000000774700000,0x0000000775180000)
+ ParOldGen       total 116736K, used 9181K [0x00000006c5a00000, 0x00000006ccc00000, 0x000000076c900000)
+  object space 116736K, 7% used [0x00000006c5a00000,0x00000006c62f7578,0x00000006ccc00000)
+ Metaspace       used 20730K, capacity 21104K, committed 21248K, reserved 1069056K
+  class space    used 2412K, capacity 2522K, committed 2560K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 0,943 Thread 0x00007fa4b000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fa4a152daa8 method=gnu.trove.TObjectHash.index(Ljava/lang/Object;)I @ 22
+Event: 0,944 Thread 0x00007fa4b000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fa4a1528184 method=gnu.trove.TObjectHash.index(Ljava/lang/Object;)I @ 22
+Event: 0,946 Thread 0x00007fa4b000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fa4a15a0a50 method=org.jetbrains.kotlin.protobuf.CodedInputStream.tryRefillBuffer(I)Z @ 177
+Event: 0,946 Thread 0x00007fa4b000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fa4a15a0a50 method=org.jetbrains.kotlin.protobuf.CodedInputStream.tryRefillBuffer(I)Z @ 177
+Event: 0,947 Thread 0x00007fa4b000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fa4a15a0a50 method=org.jetbrains.kotlin.protobuf.CodedInputStream.tryRefillBuffer(I)Z @ 177
+Event: 0,948 Thread 0x00007fa4b000b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fa4a15a0a50 method=org.jetbrains.kotlin.protobuf.CodedInputStream.tryRefillBuffer(I)Z @ 177
+Event: 1,009 Thread 0x00007fa4b000b000 Uncommon trap: reason=range_check action=make_not_entrant pc=0x00007fa4a13a9e88 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 1,009 Thread 0x00007fa4b000b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa4a152d48c method=org.jetbrains.kotlin.com.intellij.util.SmartList.get(I)Ljava/lang/Object; @ 13
+Event: 1,025 Thread 0x00007fa4b000b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa4a15f7838 method=java.lang.reflect.Method.equals(Ljava/lang/Object;)Z @ 49
+Event: 1,102 Thread 0x00007fa4b000b000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fa4a13d16e4 method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 203
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0,107 Thread 0x00007fa4b000b000 Exception <a 'java/lang/UnsatisfiedLinkError'> (0x000000076ce8d9d8) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/oops/instanceKlass.cpp, line 960]
+Event: 0,288 Thread 0x00007fa4b000b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x000000076e7227f0) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 0,378 Thread 0x00007fa4b000b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x000000076f07a360) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 0,590 Thread 0x00007fa4b000b000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$comparing$77a9974f$1(Ljava/util/function/Function;Ljava/lang/Object;Ljava/lang/Object;)I> (0x000000076ce53fb0) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm
+Event: 0,597 Thread 0x00007fa4b000b000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$static$0()J> (0x000000076cf56500) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/interpreter/linkResolver.cpp, line 620]
+Event: 0,658 Thread 0x00007fa4b000b000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$static$0(I)[Lorg/jetbrains/kotlin/com/intellij/openapi/editor/event/DocumentListener;> (0x000000076d69e868) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/in
+Event: 0,671 Thread 0x00007fa4b000b000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$static$0(I)[Lorg/jetbrains/kotlin/com/intellij/psi/PsiAnnotation;> (0x000000076d8b8858) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/interpreter/linkResolv
+Event: 0,737 Thread 0x00007fa4b000b000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$static$0(I)[Lorg/jetbrains/kotlin/com/intellij/psi/PsiElement;> (0x000000076cb279c0) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/interpreter/linkResolver.
+Event: 1,009 Thread 0x00007fa4b000b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 126> (0x000000076fba1c48) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 368]
+Event: 1,009 Thread 0x00007fa4b000b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 86> (0x000000076fba30d0) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 368]
+
+Events (10 events):
+Event: 1,195 loading class org/jetbrains/kotlin/resolve/calls/results/FlatSignatureForResolvedCallKt$createOverloadingConflictResolver$3
+Event: 1,195 loading class org/jetbrains/kotlin/resolve/calls/results/FlatSignatureForResolvedCallKt$createOverloadingConflictResolver$3 done
+Event: 1,195 loading class org/jetbrains/kotlin/resolve/calls/results/FlatSignatureForResolvedCallKt$createOverloadingConflictResolver$4
+Event: 1,195 loading class org/jetbrains/kotlin/resolve/calls/results/FlatSignatureForResolvedCallKt$createOverloadingConflictResolver$4 done
+Event: 1,196 loading class org/jetbrains/kotlin/resolve/calls/results/FlatSignatureForResolvedCallKt$createOverloadingConflictResolver$5
+Event: 1,196 loading class org/jetbrains/kotlin/resolve/calls/results/FlatSignatureForResolvedCallKt$createOverloadingConflictResolver$5 done
+Event: 1,196 loading class org/jetbrains/kotlin/resolve/CodeAnalyzerInitializer$Companion
+Event: 1,196 loading class org/jetbrains/kotlin/resolve/CodeAnalyzerInitializer$Companion done
+Event: 1,196 loading class org/jetbrains/kotlin/context/MutableModuleContext$DefaultImpls
+Event: 1,196 loading class org/jetbrains/kotlin/context/MutableModuleContext$DefaultImpls done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:00 1609073                            /home/matze/android-studio/jre/jre/bin/java
+00401000-00402000 r--p 00000000 08:00 1609073                            /home/matze/android-studio/jre/jre/bin/java
+00402000-00403000 rw-p 00001000 08:00 1609073                            /home/matze/android-studio/jre/jre/bin/java
+0235a000-0237b000 rw-p 00000000 00:00 0                                  [heap]
+6c5a00000-6ccc00000 rw-p 00000000 00:00 0 
+6ccc00000-76c900000 ---p 00000000 00:00 0 
+76c900000-775c00000 rw-p 00000000 00:00 0 
+775c00000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c0440000 rw-p 00000000 00:00 0 
+7c0440000-800000000 ---p 00000000 00:00 0 
+7fa428000000-7fa428021000 rw-p 00000000 00:00 0 
+7fa428021000-7fa42c000000 ---p 00000000 00:00 0 
+7fa430000000-7fa430436000 rw-p 00000000 00:00 0 
+7fa430436000-7fa434000000 ---p 00000000 00:00 0 
+7fa434000000-7fa434021000 rw-p 00000000 00:00 0 
+7fa434021000-7fa438000000 ---p 00000000 00:00 0 
+7fa438000000-7fa438867000 rw-p 00000000 00:00 0 
+7fa438867000-7fa43c000000 ---p 00000000 00:00 0 
+7fa43c000000-7fa43cf4c000 rw-p 00000000 00:00 0 
+7fa43cf4c000-7fa440000000 ---p 00000000 00:00 0 
+7fa440000000-7fa440021000 rw-p 00000000 00:00 0 
+7fa440021000-7fa444000000 ---p 00000000 00:00 0 
+7fa444000000-7fa444983000 rw-p 00000000 00:00 0 
+7fa444983000-7fa448000000 ---p 00000000 00:00 0 
+7fa448000000-7fa448021000 rw-p 00000000 00:00 0 
+7fa448021000-7fa44c000000 ---p 00000000 00:00 0 
+7fa44c000000-7fa44c021000 rw-p 00000000 00:00 0 
+7fa44c021000-7fa450000000 ---p 00000000 00:00 0 
+7fa450000000-7fa450021000 rw-p 00000000 00:00 0 
+7fa450021000-7fa454000000 ---p 00000000 00:00 0 
+7fa4542d0000-7fa45c000000 rw-p 00000000 00:00 0 
+7fa45c000000-7fa45c021000 rw-p 00000000 00:00 0 
+7fa45c021000-7fa460000000 ---p 00000000 00:00 0 
+7fa464000000-7fa464021000 rw-p 00000000 00:00 0 
+7fa464021000-7fa468000000 ---p 00000000 00:00 0 
+7fa468000000-7fa468021000 rw-p 00000000 00:00 0 
+7fa468021000-7fa46c000000 ---p 00000000 00:00 0 
+7fa46c000000-7fa46c021000 rw-p 00000000 00:00 0 
+7fa46c021000-7fa470000000 ---p 00000000 00:00 0 
+7fa474000000-7fa474021000 rw-p 00000000 00:00 0 
+7fa474021000-7fa478000000 ---p 00000000 00:00 0 
+7fa47c000000-7fa47c021000 rw-p 00000000 00:00 0 
+7fa47c021000-7fa480000000 ---p 00000000 00:00 0 
+7fa484000000-7fa484021000 rw-p 00000000 00:00 0 
+7fa484021000-7fa488000000 ---p 00000000 00:00 0 
+7fa48c000000-7fa48c021000 rw-p 00000000 00:00 0 
+7fa48c021000-7fa490000000 ---p 00000000 00:00 0 
+7fa490bff000-7fa490c7f000 rw-p 00000000 00:00 0 
+7fa490c7f000-7fa490dff000 ---p 00000000 00:00 0 
+7fa490dff000-7fa490fff000 rw-p 00000000 00:00 0 
+7fa490fff000-7fa494000000 rw-p 00000000 00:00 0 
+7fa494000000-7fa494021000 rw-p 00000000 00:00 0 
+7fa494021000-7fa498000000 ---p 00000000 00:00 0 
+7fa4981f5000-7fa4983f5000 rw-p 00000000 00:00 0 
+7fa4983f5000-7fa4985f5000 rw-p 00000000 00:00 0 
+7fa4985f5000-7fa4987f5000 rw-p 00000000 00:00 0 
+7fa4987f5000-7fa4987fd000 r--s 00027000 08:00 1967154                    /home/matze/.gradle/caches/transforms-2/files-2.1/b72a0538c44224fe822a892efbdc4b6c/jetified-kotlin-stdlib-common-1.4.0.jar
+7fa4987fd000-7fa498812000 r--s 00157000 08:00 1967714                    /home/matze/.gradle/caches/transforms-2/files-2.1/4f460a4818c516a51bd4a9029f461862/jetified-kotlin-stdlib-1.4.0.jar
+7fa498812000-7fa498930000 r--s 01364000 08:00 1615004                    /home/matze/Android/Sdk/platforms/android-30/android.jar
+7fa498930000-7fa498b30000 rw-p 00000000 00:00 0 
+7fa498b30000-7fa498d30000 rw-p 00000000 00:00 0 
+7fa498d30000-7fa498f30000 rw-p 00000000 00:00 0 
+7fa498f30000-7fa499130000 rw-p 00000000 00:00 0 
+7fa499130000-7fa499330000 rw-p 00000000 00:00 0 
+7fa499330000-7fa499530000 rw-p 00000000 00:00 0 
+7fa499530000-7fa499531000 r--p 00000000 08:14 3022783                    /usr/lib/x86_64-linux-gnu/libutil-2.31.so
+7fa499531000-7fa499532000 r-xp 00001000 08:14 3022783                    /usr/lib/x86_64-linux-gnu/libutil-2.31.so
+7fa499532000-7fa499533000 r--p 00002000 08:14 3022783                    /usr/lib/x86_64-linux-gnu/libutil-2.31.so
+7fa499533000-7fa499534000 r--p 00002000 08:14 3022783                    /usr/lib/x86_64-linux-gnu/libutil-2.31.so
+7fa499534000-7fa499535000 rw-p 00003000 08:14 3022783                    /usr/lib/x86_64-linux-gnu/libutil-2.31.so
+7fa49953b000-7fa49953f000 r--s 0005e000 08:00 2009057                    /home/matze/.gradle/caches/transforms-2/files-2.1/87d6a19b1b7285ab80d42b2008a5605e/jetified-core-ktx-1.3.2-api.jar
+7fa49953f000-7fa499542000 r--s 0002f000 08:00 1967710                    /home/matze/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-solver/2.0.1/30988fe2d77f3fe3bf7551bb8a8b795fad7e7226/constraintlayout-solver-2.0.1.jar
+7fa499542000-7fa499544000 r--s 00005000 08:00 1967677                    /home/matze/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar
+7fa499544000-7fa499546000 r--s 00004000 08:00 1967656                    /home/matze/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.1.0/c67e7807d9cd6c329b9d0218b2ec4e505dd340b7/lifecycle-common-2.1.0.jar
+7fa499546000-7fa499548000 r--s 00003000 08:00 1967669                    /home/matze/.gradle/caches/transforms-2/files-2.1/39a7340ceba94bf4020b40e80f1e20c6/jetified-annotations-13.0.jar
+7fa499548000-7fa499551000 r--s 00070000 08:00 1894446                    /home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.4.0/b10de696fb26620d57a208cad1ccbbffe68f17e9/kotlin-android-extensions-1.4.0.jar
+7fa499551000-7fa499554000 r-xp 00000000 08:14 1838684                    /tmp/libjansi-1.4.0-release-329 (1.4.0)-4376854728403433867.so
+7fa499554000-7fa499753000 ---p 00003000 08:14 1838684                    /tmp/libjansi-1.4.0-release-329 (1.4.0)-4376854728403433867.so
+7fa499753000-7fa499754000 rw-p 00002000 08:14 1838684                    /tmp/libjansi-1.4.0-release-329 (1.4.0)-4376854728403433867.so
+7fa499754000-7fa499759000 r--s 000a3000 08:00 1609038                    /home/matze/android-studio/jre/jre/lib/jsse.jar
+7fa499759000-7fa4997d3000 r--s 01104000 08:00 1608901                    /home/matze/android-studio/jre/lib/tools.jar
+7fa4997d3000-7fa4997de000 r--s 00081000 08:00 1894496                    /home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/216c2e14b070f334479d800987affe4054cd563f/trove4j-1.0.20181211.jar
+7fa4997de000-7fa4997ec000 r--s 000a5000 08:00 1894498                    /home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.4.0/633873c93bba12bcf764e1cf8fb36baa5501b8ff/kotlin-daemon-embeddable-1.4.0.jar
+7fa4997ec000-7fa499801000 r--s 00157000 08:00 1894477                    /home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.0/63e75298e93d4ae0b299bb869cf0c627196f8843/kotlin-stdlib-1.4.0.jar
+7fa499801000-7fa49983c000 r--s 00288000 08:00 1894464                    /home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.4.0/aa2101a19d8688e368ae6e35e8967550ced73884/kotlin-reflect-1.4.0.jar
+7fa49983c000-7fa499891000 rw-p 00000000 00:00 0 
+7fa499891000-7fa499b16000 r--s 02626000 08:00 1894526                    /home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.4.0/e5f0d669a77787ccbccd49c71b57bfd7b35faec4/kotlin-compiler-embeddable-1.4.0.jar
+7fa499b16000-7fa499b17000 ---p 00000000 00:00 0 
+7fa499b17000-7fa499c17000 rw-p 00000000 00:00 0 
+7fa499c17000-7fa499c1a000 ---p 00000000 00:00 0 
+7fa499c1a000-7fa499d18000 rw-p 00000000 00:00 0 
+7fa499d18000-7fa499d19000 ---p 00000000 00:00 0 
+7fa499d19000-7fa499d1c000 ---p 00000000 00:00 0 
+7fa499d1c000-7fa499e19000 rw-p 00000000 00:00 0 
+7fa499e19000-7fa499e1a000 ---p 00000000 00:00 0 
+7fa499e1a000-7fa499e1d000 ---p 00000000 00:00 0 
+7fa499e1d000-7fa499f1a000 rw-p 00000000 00:00 0 
+7fa499f1a000-7fa499f1b000 ---p 00000000 00:00 0 
+7fa499f1b000-7fa499f1e000 ---p 00000000 00:00 0 
+7fa499f1e000-7fa49a01b000 rw-p 00000000 00:00 0 
+7fa49a01b000-7fa49a01c000 ---p 00000000 00:00 0 
+7fa49a01c000-7fa49a01f000 ---p 00000000 00:00 0 
+7fa49a01f000-7fa49a11c000 rw-p 00000000 00:00 0 
+7fa49a11c000-7fa49a11f000 ---p 00000000 00:00 0 
+7fa49a11f000-7fa49a21d000 rw-p 00000000 00:00 0 
+7fa49a21d000-7fa49a7e1000 r--p 00000000 08:14 3021763                    /usr/lib/locale/locale-archive
+7fa49a7e1000-7fa49a7e4000 ---p 00000000 00:00 0 
+7fa49a7e4000-7fa49a8e2000 rw-p 00000000 00:00 0 
+7fa49a8e2000-7fa49a8e5000 ---p 00000000 00:00 0 
+7fa49a8e5000-7fa49a9e3000 rw-p 00000000 00:00 0 
+7fa49a9e3000-7fa49a9e4000 ---p 00000000 00:00 0 
+7fa49a9e4000-7fa49c000000 rw-p 00000000 00:00 0 
+7fa49c000000-7fa49c021000 rw-p 00000000 00:00 0 
+7fa49c021000-7fa4a0000000 ---p 00000000 00:00 0 
+7fa4a0001000-7fa4a0018000 r-xp 00000000 08:00 1608990                    /home/matze/android-studio/jre/jre/lib/amd64/libnet.so
+7fa4a0018000-7fa4a0019000 r--p 00016000 08:00 1608990                    /home/matze/android-studio/jre/jre/lib/amd64/libnet.so
+7fa4a0019000-7fa4a001a000 rw-p 00017000 08:00 1608990                    /home/matze/android-studio/jre/jre/lib/amd64/libnet.so
+7fa4a001a000-7fa4a0db7000 rw-p 00000000 00:00 0 
+7fa4a0db7000-7fa4a0f8a000 r--s 03cdf000 08:00 1609025                    /home/matze/android-studio/jre/jre/lib/rt.jar
+7fa4a0f8a000-7fa4a1000000 rw-p 00000000 00:00 0 
+7fa4a1000000-7fa4a16f0000 rwxp 00000000 00:00 0 
+7fa4a16f0000-7fa4b0000000 ---p 00000000 00:00 0 
+7fa4b0000000-7fa4b16a8000 rw-p 00000000 00:00 0 
+7fa4b16a8000-7fa4b4000000 ---p 00000000 00:00 0 
+7fa4b4000000-7fa4b4002000 r--s 00001000 08:00 1967706                    /home/matze/.gradle/caches/transforms-2/files-2.1/b3c4e51997bcb21a6dfcf68e7f4c7727/jetified-kotlin-android-extensions-runtime-1.4.0.jar
+7fa4b4003000-7fa4b4005000 r--s 00003000 08:00 1894495                    /home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar
+7fa4b4005000-7fa4b50cb000 rw-p 00000000 00:00 0 
+7fa4b50cb000-7fa4b50cc000 ---p 00000000 00:00 0 
+7fa4b50cc000-7fa4b51cc000 rw-p 00000000 00:00 0 
+7fa4b51cc000-7fa4b51cd000 ---p 00000000 00:00 0 
+7fa4b51cd000-7fa4b52cd000 rw-p 00000000 00:00 0 
+7fa4b52cd000-7fa4b52ce000 ---p 00000000 00:00 0 
+7fa4b52ce000-7fa4b53ce000 rw-p 00000000 00:00 0 
+7fa4b53ce000-7fa4b53cf000 ---p 00000000 00:00 0 
+7fa4b53cf000-7fa4b54cf000 rw-p 00000000 00:00 0 
+7fa4b54cf000-7fa4b54d0000 ---p 00000000 00:00 0 
+7fa4b54d0000-7fa4b55d0000 rw-p 00000000 00:00 0 
+7fa4b55d0000-7fa4b55d1000 ---p 00000000 00:00 0 
+7fa4b55d1000-7fa4b56d1000 rw-p 00000000 00:00 0 
+7fa4b56d1000-7fa4b56d2000 ---p 00000000 00:00 0 
+7fa4b56d2000-7fa4b57d2000 rw-p 00000000 00:00 0 
+7fa4b57d2000-7fa4b57d3000 ---p 00000000 00:00 0 
+7fa4b57d3000-7fa4b58d3000 rw-p 00000000 00:00 0 
+7fa4b58d3000-7fa4b58d4000 ---p 00000000 00:00 0 
+7fa4b58d4000-7fa4b59d4000 rw-p 00000000 00:00 0 
+7fa4b59d4000-7fa4b59d5000 ---p 00000000 00:00 0 
+7fa4b59d5000-7fa4b5b0e000 rw-p 00000000 00:00 0 
+7fa4b5b0e000-7fa4b600d000 ---p 00000000 00:00 0 
+7fa4b600d000-7fa4b6046000 rw-p 00000000 00:00 0 
+7fa4b6046000-7fa4b6544000 ---p 00000000 00:00 0 
+7fa4b6544000-7fa4b658e000 rw-p 00000000 00:00 0 
+7fa4b658e000-7fa4b67e0000 ---p 00000000 00:00 0 
+7fa4b67e0000-7fa4b67fd000 rw-p 00000000 00:00 0 
+7fa4b67fd000-7fa4b6ba1000 ---p 00000000 00:00 0 
+7fa4b6ba1000-7fa4b6bbc000 r-xp 00000000 08:00 1608986                    /home/matze/android-studio/jre/jre/lib/amd64/libzip.so
+7fa4b6bbc000-7fa4b6bbd000 r--p 0001a000 08:00 1608986                    /home/matze/android-studio/jre/jre/lib/amd64/libzip.so
+7fa4b6bbd000-7fa4b6bbe000 rw-p 0001b000 08:00 1608986                    /home/matze/android-studio/jre/jre/lib/amd64/libzip.so
+7fa4b6bbe000-7fa4b6bc1000 r--p 00000000 08:14 3022774                    /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7fa4b6bc1000-7fa4b6bc8000 r-xp 00003000 08:14 3022774                    /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7fa4b6bc8000-7fa4b6bca000 r--p 0000a000 08:14 3022774                    /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7fa4b6bca000-7fa4b6bcb000 r--p 0000b000 08:14 3022774                    /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7fa4b6bcb000-7fa4b6bcc000 rw-p 0000c000 08:14 3022774                    /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7fa4b6bcc000-7fa4b6bd2000 rw-p 00000000 00:00 0 
+7fa4b6bd2000-7fa4b6bd3000 r--s 00002000 08:00 1967673                    /home/matze/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar
+7fa4b6bd3000-7fa4b6bdb000 r--s 00027000 08:00 1894507                    /home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.0/1c752cce0ead8d504ccc88a4fed6471fd83ab0dd/kotlin-stdlib-common-1.4.0.jar
+7fa4b6bdb000-7fa4b6beb000 r-xp 00000000 08:00 1609010                    /home/matze/android-studio/jre/jre/lib/amd64/libnio.so
+7fa4b6beb000-7fa4b6bec000 ---p 00010000 08:00 1609010                    /home/matze/android-studio/jre/jre/lib/amd64/libnio.so
+7fa4b6bec000-7fa4b6bed000 r--p 00010000 08:00 1609010                    /home/matze/android-studio/jre/jre/lib/amd64/libnio.so
+7fa4b6bed000-7fa4b6bee000 rw-p 00011000 08:00 1609010                    /home/matze/android-studio/jre/jre/lib/amd64/libnio.so
+7fa4b6bee000-7fa4b6c16000 r-xp 00000000 08:00 1608994                    /home/matze/android-studio/jre/jre/lib/amd64/libjava.so
+7fa4b6c16000-7fa4b6c17000 r--p 00027000 08:00 1608994                    /home/matze/android-studio/jre/jre/lib/amd64/libjava.so
+7fa4b6c17000-7fa4b6c19000 rw-p 00028000 08:00 1608994                    /home/matze/android-studio/jre/jre/lib/amd64/libjava.so
+7fa4b6c19000-7fa4b6c1c000 r--p 00000000 08:14 3022781                    /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fa4b6c1c000-7fa4b6c20000 r-xp 00003000 08:14 3022781                    /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fa4b6c20000-7fa4b6c21000 r--p 00007000 08:14 3022781                    /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fa4b6c21000-7fa4b6c22000 ---p 00008000 08:14 3022781                    /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fa4b6c22000-7fa4b6c23000 r--p 00008000 08:14 3022781                    /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fa4b6c23000-7fa4b6c24000 rw-p 00009000 08:14 3022781                    /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fa4b6c24000-7fa4b6c25000 ---p 00000000 00:00 0 
+7fa4b6c25000-7fa4b6c28000 ---p 00000000 00:00 0 
+7fa4b6c28000-7fa4b6d25000 rw-p 00000000 00:00 0 
+7fa4b6d25000-7fa4b6d34000 r--p 00000000 08:14 3022768                    /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fa4b6d34000-7fa4b6ddb000 r-xp 0000f000 08:14 3022768                    /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fa4b6ddb000-7fa4b6e72000 r--p 000b6000 08:14 3022768                    /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fa4b6e72000-7fa4b6e73000 r--p 0014c000 08:14 3022768                    /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fa4b6e73000-7fa4b6e74000 rw-p 0014d000 08:14 3022768                    /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fa4b6e74000-7fa4b7aa3000 r-xp 00000000 08:00 1609003                    /home/matze/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fa4b7aa3000-7fa4b7b4b000 r--p 00c2e000 08:00 1609003                    /home/matze/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fa4b7b4b000-7fa4b7b74000 rw-p 00cd6000 08:00 1609003                    /home/matze/android-studio/jre/jre/lib/amd64/server/libjvm.so
+7fa4b7b74000-7fa4b7bba000 rw-p 00000000 00:00 0 
+7fa4b7bba000-7fa4b7bdf000 r--p 00000000 08:14 3022766                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fa4b7bdf000-7fa4b7d57000 r-xp 00025000 08:14 3022766                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fa4b7d57000-7fa4b7da1000 r--p 0019d000 08:14 3022766                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fa4b7da1000-7fa4b7da2000 ---p 001e7000 08:14 3022766                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fa4b7da2000-7fa4b7da5000 r--p 001e7000 08:14 3022766                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fa4b7da5000-7fa4b7da8000 rw-p 001ea000 08:14 3022766                    /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fa4b7da8000-7fa4b7dac000 rw-p 00000000 00:00 0 
+7fa4b7dac000-7fa4b7dad000 r--p 00000000 08:14 3022767                    /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7fa4b7dad000-7fa4b7daf000 r-xp 00001000 08:14 3022767                    /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7fa4b7daf000-7fa4b7db0000 r--p 00003000 08:14 3022767                    /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7fa4b7db0000-7fa4b7db1000 r--p 00003000 08:14 3022767                    /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7fa4b7db1000-7fa4b7db2000 rw-p 00004000 08:14 3022767                    /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7fa4b7db2000-7fa4b7dc8000 r-xp 00000000 08:00 1608974                    /home/matze/android-studio/jre/jre/lib/amd64/jli/libjli.so
+7fa4b7dc8000-7fa4b7dc9000 r--p 00015000 08:00 1608974                    /home/matze/android-studio/jre/jre/lib/amd64/jli/libjli.so
+7fa4b7dc9000-7fa4b7dca000 rw-p 00016000 08:00 1608974                    /home/matze/android-studio/jre/jre/lib/amd64/jli/libjli.so
+7fa4b7dca000-7fa4b7dd1000 r--p 00000000 08:14 3022779                    /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fa4b7dd1000-7fa4b7de2000 r-xp 00007000 08:14 3022779                    /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fa4b7de2000-7fa4b7de7000 r--p 00018000 08:14 3022779                    /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fa4b7de7000-7fa4b7de8000 r--p 0001c000 08:14 3022779                    /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fa4b7de8000-7fa4b7de9000 rw-p 0001d000 08:14 3022779                    /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fa4b7de9000-7fa4b7ded000 rw-p 00000000 00:00 0 
+7fa4b7ded000-7fa4b7dee000 r--s 0000a000 08:00 1967670                    /home/matze/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar
+7fa4b7dee000-7fa4b7df0000 r--s 00009000 08:00 1894492                    /home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.4.0/52ac54a56c9121f54fcca387c5a0f441d1af9be8/kotlin-script-runtime-1.4.0.jar
+7fa4b7df0000-7fa4b7df8000 rw-s 00000000 08:14 1838681                    /tmp/hsperfdata_matze/4975
+7fa4b7df8000-7fa4b7df9000 rw-p 00000000 00:00 0 
+7fa4b7df9000-7fa4b7e06000 r-xp 00000000 08:00 1608982                    /home/matze/android-studio/jre/jre/lib/amd64/libverify.so
+7fa4b7e06000-7fa4b7e08000 r--p 0000c000 08:00 1608982                    /home/matze/android-studio/jre/jre/lib/amd64/libverify.so
+7fa4b7e08000-7fa4b7e09000 rw-p 0000e000 08:00 1608982                    /home/matze/android-studio/jre/jre/lib/amd64/libverify.so
+7fa4b7e09000-7fa4b7e0b000 rw-p 00000000 00:00 0 
+7fa4b7e0b000-7fa4b7e0c000 r--p 00000000 08:14 3020617                    /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fa4b7e0c000-7fa4b7e2f000 r-xp 00001000 08:14 3020617                    /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fa4b7e2f000-7fa4b7e37000 r--p 00024000 08:14 3020617                    /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fa4b7e37000-7fa4b7e38000 r--p 00000000 00:00 0 
+7fa4b7e38000-7fa4b7e39000 r--p 0002c000 08:14 3020617                    /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fa4b7e39000-7fa4b7e3a000 rw-p 0002d000 08:14 3020617                    /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fa4b7e3a000-7fa4b7e3b000 rw-p 00000000 00:00 0 
+7ffe09b1c000-7ffe09b3d000 rw-p 00000000 00:00 0                          [stack]
+7ffe09bad000-7ffe09bb0000 r--p 00000000 00:00 0                          [vvar]
+7ffe09bb0000-7ffe09bb1000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+java_command: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @/home/matze/Documents/Programming/Android/Splitter/app/build/20201005_690569079226593406.compiler.options
+java_class_path (initial): /home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.4.0/e5f0d669a77787ccbccd49c71b57bfd7b35faec4/kotlin-compiler-embeddable-1.4.0.jar:/home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.4.0/aa2101a19d8688e368ae6e35e8967550ced73884/kotlin-reflect-1.4.0.jar:/home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.0/63e75298e93d4ae0b299bb869cf0c627196f8843/kotlin-stdlib-1.4.0.jar:/home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.4.0/52ac54a56c9121f54fcca387c5a0f441d1af9be8/kotlin-script-runtime-1.4.0.jar:/home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.4.0/633873c93bba12bcf764e1cf8fb36baa5501b8ff/kotlin-daemon-embeddable-1.4.0.jar:/home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/216c2e14b070f334479d800987affe4054cd563f/trove4j-1.0.20181211.jar:/home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.0/1c752cce0ead8d504ccc88a4fed6471fd83ab0dd/kotlin-stdlib-common-1.4.0.jar:/home/matze/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/home/matze/android-studio/jre/lib/tools.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/matze/.local/bin:/home/matze/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SHELL=/bin/zsh
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa13c80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa13c80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x874670], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x874670], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x874670], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x874670], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x874540], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x874730], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x874730], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x874730], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x874730], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal
+DISTRIB_DESCRIPTION="Ubuntu 20.04.1 LTS"
+
+uname:Linux 5.4.0-48-generic #52-Ubuntu SMP Thu Sep 10 10:58:49 UTC 2020 x86_64
+libc:glibc 2.31 NPTL 2.31 
+rlimit: STACK 8192k, CORE 0k, NPROC 63413, NOFILE 1048576, AS infinity
+load average:0,71 0,63 0,45
+
+/proc/meminfo:
+MemTotal:       16404516 kB
+MemFree:         6131852 kB
+MemAvailable:   10601008 kB
+Buffers:          554720 kB
+Cached:          3848268 kB
+SwapCached:            0 kB
+Active:          6018068 kB
+Inactive:        2975136 kB
+Active(anon):    4510320 kB
+Inactive(anon):   394152 kB
+Active(file):    1507748 kB
+Inactive(file):  2580984 kB
+Unevictable:          64 kB
+Mlocked:              64 kB
+SwapTotal:       1907708 kB
+SwapFree:        1907708 kB
+Dirty:               740 kB
+Writeback:             0 kB
+AnonPages:       4590964 kB
+Mapped:          1418168 kB
+Shmem:            415560 kB
+KReclaimable:     718428 kB
+Slab:             970160 kB
+SReclaimable:     718428 kB
+SUnreclaim:       251732 kB
+KernelStack:       20320 kB
+PageTables:        62160 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    10109964 kB
+Committed_AS:   14199316 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       59412 kB
+VmallocChunk:          0 kB
+Percpu:            30336 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      688612 kB
+DirectMap2M:    12890112 kB
+DirectMap1G:     3145728 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-11
+cpu_memory_nodes: 0
+active_processor_count: 12
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 8840970240
+memory_max_usage_in_bytes: 9050095616
+
+
+CPU:total 12 (initial active 12) (12 cores per cpu, 1 threads per core) family 23 model 113 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 1983.482
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 0
+cpu cores	: 6
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 1
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2674.312
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 1
+cpu cores	: 6
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 2
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2158.996
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 2
+cpu cores	: 6
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 3
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 4114.386
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 4
+cpu cores	: 6
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 4
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2306.088
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 5
+cpu cores	: 6
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 5
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2515.852
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 6
+cpu cores	: 6
+apicid		: 12
+initial apicid	: 12
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 6
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2157.836
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 0
+cpu cores	: 6
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 7
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 3554.828
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 1
+cpu cores	: 6
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 8
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2154.639
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 2
+cpu cores	: 6
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 9
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 4124.301
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 4
+cpu cores	: 6
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 10
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2614.358
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 5
+cpu cores	: 6
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 11
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 5 3600 6-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2743.541
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 6
+cpu cores	: 6
+apicid		: 13
+initial apicid	: 13
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7199.43
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+
+
+Memory: 4k page, physical 16404516k(6131600k free), swap 1907708k(1907708k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.242-b3-6222593) for linux-amd64 JRE (1.8.0_242-release-1644-b3-6222593), built by "android-build" with gcc 4.8
+
+time: Mon Oct  5 14:49:22 2020
+timezone: CEST
+elapsed time: 1 seconds (0d 0h 0m 1s)
+

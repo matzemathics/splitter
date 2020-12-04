@@ -1,0 +1,61 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath 'digital.wup:android-maven-publish:3.6.2'
+    }
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+    google()
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'signing'
+apply plugin: 'digital.wup.android-maven-publish' // 'gradle publishToMavenLocal' and 'publish' tasks
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+    ndkVersion '21.3.6528147'
+
+    // http://stackoverflow.com/questions/35312743/workaround-to-link-a-shared-library-in-debug-mode-with-android-studio-v2
+    defaultPublishConfig 'release'
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.3.1"
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+}
